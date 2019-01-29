@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="spring-totp" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script>
+        function createUser() {
+            var userData = {"username" : "", "password" : ""};
+            userData.username = $('#username').val();
+            userData.password = $('#password').val();
+
+            $.ajax({
+                type : "POST",
+                url : "/2fa/users",
+                data : JSON.stringify(userData),
+                contentType: 'application/json',
+                success : function(msg) {
+                    alert("success");
+                },
+                error : function() {
+                    alert("failure");
+                }
+            });
+        }
+    </script>
+
+
+</head>
+<body align="center">
+<div ng-controller="UserAdminController as userAdmin">
+    <h1>Create user - secret (semilla)</h1>
+
+    <form method="POST" action="/">
+        User ID :  <input type="text" name="Username" id="username"/><br />
+        Password : <input type="password" name="Password" id="password"/><br />
+        <br /> <input type="button" value="Submit" onClick="createUser();"/>
+    </form>
+
+
+</div>
+</body>
+</html>

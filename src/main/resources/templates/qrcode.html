@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="spring-totp" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script>
+        function createQRCode() {
+
+            $.ajax({
+                type : "GET",
+                url : "/2fa/qrcode/get/"+$('#username').val(),
+                contentType: 'application/json',
+                success : function(msg) {
+                    alert("success");
+
+                    $('#qr').attr('src', 'data:image/png;base64,'+msg);
+                },
+                error : function() {
+                    alert("failure");
+                }
+            });
+        }
+    </script>
+
+
+</head>
+<body align="center">
+<div ng-controller="UserAdminController as userAdmin">
+    <h1>Generate QR Code</h1>
+
+    <form method="POST" action="/">
+        User ID :  <input type="text" name="Username" id="username"/><br />
+        <br /> <input type="button" value="Submit" onClick="createQRCode();"/>
+    </form>
+
+</div>
+
+<div>
+    <img id="qr" src="" />
+
+</div>
+
+</body>
+</html>

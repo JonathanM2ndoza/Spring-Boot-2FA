@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+function validateTotp() {
+	var userData = {"totpKey" : ""};
+	userData.totpKey = $('#totpKey').val();
+
+	$.ajax({
+		type : "POST",
+		url : "/2fa/qrcode/validate/"+$('#username').val(),
+		data : JSON.stringify(userData),
+        contentType: 'application/json',
+		success : function(msg) {
+			alert("success");
+		},
+		error : function() {
+			alert("failure");
+		}
+	});
+}	
+</script>
+</head>
+<body>
+	<h1>Validate TOTP with Google Authentication</h1>
+
+	<form method="POST" action="/">
+		User ID :  <input type="text" name="username" id="username"/><br />
+		TOTP Key:  <input type="text" name="totpKey" id="totpKey"/><br />
+		<br /> <input type="button" value="Submit" onClick="validateTotp();"/>
+	</form>
+
+</body>
+</html>
