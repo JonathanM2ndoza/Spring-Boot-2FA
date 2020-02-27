@@ -12,7 +12,7 @@ Two-factor authentication adds a second level of authentication to an account lo
 
 https://www.cnet.com/news/two-factor-authentication-what-you-need-to-know-faq/
 
-## Two-factor authentication (2FA)
+## Google Authenticator
 
 ![Screenshot](/prtsc/google-authenticator.png)
 
