@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Login</title>
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 <script>
-function ldapAuthenticate() {
+function login() {
 	var userData = {"user" : "", "password" : ""};
 	userData.user = $('#user').val();
 	userData.password = $('#password').val();
@@ -26,12 +27,12 @@ function ldapAuthenticate() {
 </script>
 </head>
 <body>
-	<h1>Authentication</h1>
+	<h1> Login </h1>
 
 	<form method="POST" action="/">
 		User ID :  <input type="text" name="User" id="user"/><br />
 		Password : <input type="password" name="Password" id="password"/><br />
-		<br /> <input type="button" value="Submit" onClick="ldapAuthenticate();"/>
+		<br /> <input type="button" value="Submit" onClick="login();"/>
 	</form>
 
 </body>

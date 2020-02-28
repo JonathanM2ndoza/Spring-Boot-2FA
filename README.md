@@ -22,4 +22,28 @@ When logging into a site supporting Authenticator (including Google services) or
 
 https://en.wikipedia.org/wiki/Google_Authenticator
 
+## Example Two-factor authentication (2FA) with Google Authenticator
+
+### Create user
+
+![Screenshot](/prtsc/2fa-1.png)
+
+![Screenshot](/prtsc/2fa-2.png)
+
+![Screenshot](/prtsc/2fa-2.1.png)
+
+![Screenshot](/prtsc/2fa-2.2.png)
+
+### Create QRCode scan the barcode 
+
+![Screenshot](/prtsc/2fa-3.png)
+
+![Screenshot](/prtsc/2fa-3.1.png)
+
+### Validate TOTP key
+
+![Screenshot](/prtsc/2fa-4.png)
+
+
+
 
