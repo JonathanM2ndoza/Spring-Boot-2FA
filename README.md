@@ -34,15 +34,17 @@ https://en.wikipedia.org/wiki/Google_Authenticator
 
 ![Screenshot](/prtsc/2fa-2.2.png)
 
-### Create QRCode scan the barcode 
+### Create QRCode and scan the barcode 
 
 ![Screenshot](/prtsc/2fa-3.png)
 
-![Screenshot](/prtsc/2fa-3.1.png)
+![Screenshot](/prtsc/2fa-3.1.jpg)
 
 ### Validate TOTP key
 
 ![Screenshot](/prtsc/2fa-4.png)
+
+
 
 
 
